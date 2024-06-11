@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fcfcfc;
+}
+.image-middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    transition: flex 0.7s ease-in;
+    /* width: 90vw; */
+}
+.fruit{
+    /* height: 80vh;
+    flex: 0.5; */
+    height:30em;
+    width: 5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2em;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+.strawberry{background-image: url(images/strawberry.jpg);}
+.red-berries{background-image: url(images/red-berries.jpg);}
+.raspberries{background-image: url(images/raspberries.jpg);}
+.cherries{background-image: url(images/cherries.jpg);}
+.cranberries{background-image: url(images/cranberries.jpg);}
+
+.fruit p{
+    position: absolute;bottom: 1.5em;left: 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+    /* visibility: hidden; */
+    opacity: 0;
+}
+.fruit:hover{
+    width: 40em;
+}
+.fruit:hover p{
+    /* visibility: visible; */
+    opacity: 1;
+}
+
+@media screen and (max-width:996px){
+    .fruit{
+        height:25em;
+    
+    }
+    
+    .fruit:hover{
+        width: 30em;
+    }
+}
